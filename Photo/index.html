@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Moloko.Moloko</title>
+	<link rel="icon" href="img/icon.png">
+	<style>
+		.center {
+			width: 400px;
+			padding: 30px;
+			margin: auto;
+			background: grey;
+		}
+
+		.gallery-nav {
+			margin: auto;
+			padding-top: 50px;
+			padding-left: 200px;
+			background: silver;
+			width: 600px;
+		}
+
+		.img_p {
+			padding-left: 10px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div class="center">
+		<h2>Это лучший снимок из ленты</h2>
+		<img id="view" class="gallery-view" src="img/1.jpg">
+	</div>
+	<nav id="nav" class="gallery-nav">
+		<h3>Кликните по лучшей картинке и она попадет в топ!</h3>
+		<a href="img/1.jpg" class="gallery-current" target="_blank">
+			<img clas="img_p" src="img/1.jpg" title="FOTO_1" width="100" height="111" onerror="this.style.display = 'none'">
+		</a>
+		<a href="img/2.jpg" target="_blank">
+			<img clas="img_p" src="img/2.jpg" title="FOTO_1" width="100" height="111" onerror="this.style.display = 'none'">
+		</a>
+		<a href="img/3.jpg" target="_blank">
+			<img clas="img_p" src="img/3.jpg" title="FOTO_3" width="100" height="111" onerror="this.style.display = 'none'">
+		</a>
+		<a href="img/4.jpg" target="_blank">
+			<img clas="img_p" src="img/4.jpg" title="FOTO_4" width="100" height="111" onerror="this.style.display = 'none'">
+		</a>
+	</nav>
+	<script src="../main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo');
+
+/*VARIABLES*/
+@font-face {
+	font-family: 'Arimo';
+}
+
+.insideWrapMixin {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+@media all and (min-width: 0) and (max-width: 1239px) {
+	.insideWrapMixin {
+		width: 100%;
+		margin: 0 0;
+	}
+}
+
+/* -- DEFAULTS -- */
+div,
+ul,
+li {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.body {
+	background: url('img/metal-texture-009.jpg') no-repeat;
+	background-size: 100%;
+	/* Современные браузеры */
+}
+
+.top-menu {
+	position: relative;
+	background: rgba(34, 34, 34, 0.2);
+}
+
+.menu-main {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.menu-main:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.left-item {
+	float: left;
+}
+
+.right-item {
+	float: right;
+}
+
+.navbar-logo {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.menu-main a {
+	text-decoration: none;
+	display: block;
+	line-height: 80px;
+	padding: 0 20px;
+	font-size: 18px;
+	letter-spacing: 2px;
+	font-family: 'Arimo', sans-serif;
+	font-weight: bold;
+	color: white;
+	transition: .3s linear;
+	text-shadow: 1px 3px 5px #000;
+}
+
+.menu-main a:hover {
+	background: rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 830px) {
+	.menu-main {
+		padding-top: 90px;
+		text-align: center;
+	}
+
+	.navbar-logo {
+		position: absolute;
+		left: 50%;
+		top: 10px;
+		transform: translateX(-50%);
+	}
+
+	.menu-main li {
+		float: none;
+		display: inline-block;
+	}
+
+	.menu-main a {
+		line-height: normal;
+		padding: 20px 15px;
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 630px) {
+	.menu-main li {
+		display: block;
+	}
+}
+
+/* -- FLUID GRID STYLES -- */
+.gallery {
+	position: relative;
+	background: rgba(34, 34, 34, 0.2);
+	text-align: center;
+}
+
+.gallery .galleryDesc {
+	font-family: 'Arimo', sans-serif;
+	color: rgba(34, 34, 34, 0.2);
+	font-size: 16px;
+	line-height: 32px;
+	margin-bottom: 54px;
+	padding: 0 20px;
+}
+
+.gallery .galleryInside {
+	width: 1200px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-row-gap: 37px;
+	grid-column-gap: 34px;
+	justify-items: center;
+}
+
+@media all and (min-width: 0) and (max-width: 1239px) {
+	.gallery .galleryInside {
+		width: 100%;
+		margin: 0 0;
+	}
+}
+
+@media all and (min-width: 810px) and (max-width: 1200px) {
+	.gallery .galleryInside {
+		grid-template-columns: repeat(2, 1fr);
+		margin-top: 40px;
+	}
+}
+
+@media all and (min-width: 0) and (max-width: 810px) {
+	.gallery .galleryInside {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* -- LEGEND STYLES (NOT PART OF GRID FRAMEWORK) -- */
+h1 {
+	font: 600 20px "Helvetica Neue";
+	text-align: right;
+	text-transform: uppercase;
+}
+
+label {
+	padding: 8px 15px;
+	margin-bottom: 20px;
+	display: block;
+	font: 100 22px "Helvetica Neue";
+	border-left: 10px solid #922d8d;
+	text-shadow: 1px 3px 5px #000;
+}
+
+label:last-of-type {
+	border-left: 10px dotted #922d8d;
+}
+
+p {
+	font: 200 15px/1.5em "Helvetica Neue";
+	max-width: 400px;
+	margin-bottom: 30px;
+	color: #333;
+	text-shadow: 1px 3px 5px #000;
+}
+
+footer {
+	padding: 30px 0;
+	background: #aebcbf;
+	background: -webkit-linear-gradient(#aebcbf 0%, #6e7774 50%, #0a0e0a 100%, #0a0809 100%, #0a0e0a 101%);
+	background: -o-linear-gradient(#aebcbf 0%, #6e7774 50%, #0a0e0a 100%, #0a0809 100%, #0a0e0a 101%);
+	background: linear-gradient(#aebcbf 0%, #6e7774 50%, #0a0e0a 100%, #0a0809 100%, #0a0e0a 101%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aebcbf', endColorstr='#0a0e0a', GradientType=0);
+	color: white;
+}
+
+.footer-col {
+	width: 33.3333333333%;
+	float: left;
+}
+
+.footer-col a {
+	color: white;
+}
+
+.footer-col:last-child {
+	text-align: right;
+}
+
+.social-bar-wrap {
+	text-align: center;
+}
+
+.social-bar-wrap a {
+	padding: 0 7px;
+	font-size: 18px;
+}
+
+.footer-col {
+	float: none;
+	margin-bottom: 20px;
+	width: 100%;
+	text-align: center;
+}
+
+.footer-col:last-child {
+	text-align: center;
+	margin-bottom: 0;
+}
+
+.example1 {
+	width: 660px;
+	background-color: #E0E4EF;
+	height: 400px;
+	background-image: url("../img/instagram.png"), url("../img/s1.jpg");
+	background-repeat: no-repeat;
+	background-position: 190px 110px, 0px 0px;
+}
+
+.example2 {
+	width: 660px;
+	background-color: #E0E4EF;
+	height: 400px;
+	background-image: url("../img/icon.png");
+	background-repeat: repeat;
+}
+
+.example3 {
+	background: url("../img/h1.jpg") no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.sign {
+	width: 100%;
+	height: 100px;
+	background: rgba(0, 13, 0, 0.71);
+	font-family: sans-serif;
+	text-transform: uppercase;
+	color: #ffffff;
+	text-align: center;
+	position: relative;
+	font-size: 4rem;
+	font-weight: bolder;
+	padding-top: 30px;
+	top: 75%;
+}
+

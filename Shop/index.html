@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Корзина интернет магазина</title>
+	<script src="price-format.js"></script>
+</head>
+
+<body>
+	<div id="container">
+		<div class="box">
+			<img src="img/product-01.jpg" alt="pic1">
+			<button class="add fa fa-plus" data-price="1800"></button>
+			<h3 id="item-one">Стул леопард</h3>
+			<p>1 800 руб.</p>
+		</div>
+		<div class="box">
+			<img src="img/product-02.jpg" alt="pic2">
+			<button class="add fa fa-plus" data-price="2300"></button>
+			<h3 id="item-two">Стул Инициатива</h3>
+			<p>2 300 руб.</p>
+		</div>
+		<div class="box">
+			<img src="img/product-03.jpg" alt="pic3">
+			<button class="add fa fa-plus" data-price="2600"></button>
+			<h3 id="item-three">Стул Грация</h3>
+			<p>2 600 руб.</p>
+		</div>
+		<div id="cart">
+			<div id="head">
+				<h3>
+					Товаров в корзине:
+					<span id="cart-count">0</span>
+				</h3>
+			</div>
+			<div id="head">
+				<h3>
+					Общая стоимость:
+					<span id="cart-total-price">0</span> руб.
+				</h3>
+			</div>
+		</div>
+	</div>
+	<script src="add-to-cart.js"></script>
+</body>
+
+</html>
